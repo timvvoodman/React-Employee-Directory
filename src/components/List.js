@@ -15,7 +15,7 @@ function List({ results }) {
       </thead>
       <tbody>
         {results.map((result) => (
-          <tr>
+          <tr key={result.email}>
             <td>
               <img src={result.picture.thumbnail} alt="employee"></img>
             </td>
