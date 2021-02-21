@@ -17,11 +17,7 @@ This is my first deployed React App! The App retreives 50 randomly generated "em
 
 - [Demo](#demo)
 - [Tech Stack](#tech-stack)
-- [Features](#features)
 - [Installation](#installation)
-- [Configuration Setup](#configuration-setup)
-- [Usage](#usage)
-- [Testing](#testing)
 - [Collaborators](#collaborators)
 - [Contributing](#contributing)
 - [License](#license)
@@ -31,7 +27,7 @@ This is my first deployed React App! The App retreives 50 randomly generated "em
 
 View the application at [Deployed Project Link](https://tw-react-emp-directory.herokuapp.com/)
 
-![Demo](https://github.com/timvvoodman/react-employee-directory/tree/main/public/Assets/Demo.gif)
+![Demo](https://github.com/timvvoodman/react-employee-directory/blob/main/public/Assets/Demo.gif)
 
 ## Technology Stack
 
