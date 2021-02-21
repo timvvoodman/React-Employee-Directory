@@ -6,6 +6,7 @@ function ResultContainer() {
   //State Definition for employees
   const [employees, setEmployees] = useState({
     results: [],
+    filterResults: [],
     search: "",
   });
 
@@ -17,6 +18,7 @@ function ResultContainer() {
       .then((response) => {
         setEmployees({
           results: response.results,
+          filterResults: [...response.results],
         });
       });
   }, []);
@@ -35,9 +37,17 @@ function ResultContainer() {
     const filteredArray = arr.filter(
       (employee) => employees.search === employee.name.last
     );
-    setEmployees({ ...employees, results: filteredArray });
+    setEmployees({ ...employees, filterResults: filteredArray });
     console.log("Click");
     console.log(filteredArray);
+  }
+  //resets any search or filter to original employee list on UI and clears the search
+  function resetSearch() {
+    setEmployees({
+      ...employees,
+      filterResults: employees.results,
+      search: "",
+    });
   }
 
   return (
@@ -47,8 +57,9 @@ function ResultContainer() {
         search={employees.search}
         handleInputChange={handleInputChange}
         handleSearch={handleSearch}
+        resetSearch={resetSearch}
       />
-      <List results={employees.results} />
+      <List results={employees.filterResults} />
     </>
   );
 }
