@@ -3,9 +3,21 @@ import Form, { Group, Control } from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 
-function SearchForm({ handleInputChange, handleSearch, search, resetSearch }) {
+function SearchForm({
+  handleInputChange,
+  handleSearch,
+  search,
+  resetSearch,
+  handleSort,
+}) {
   return (
     <>
+      <div>
+        <Button onClick={handleSort} variant="secondary" size="sm">
+          Sort By Last Name
+        </Button>
+      </div>
+
       <InputGroup className="mb-3">
         <InputGroup.Prepend>
           <Button onClick={handleSearch} variant="outline-secondary">

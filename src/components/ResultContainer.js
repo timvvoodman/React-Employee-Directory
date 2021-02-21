@@ -31,6 +31,25 @@ function ResultContainer() {
     setEmployees({ ...employees, search: value });
     console.log(employees.search);
   }
+
+  //Sorts employees alphabetically by last name
+  function handleSort(event) {
+    const sortedList = [...employees.results].sort((a, b) => {
+      let compared = 0;
+      const aName = a.name.last;
+      const bName = b.name.last;
+
+      if (aName > bName) {
+        compared = 1;
+      }
+      if (aName < bName) {
+        compared = -1;
+      }
+      return compared;
+    });
+    setEmployees({ ...employees, filterResults: sortedList });
+  }
+
   //Search employee list then return with names that match
   function handleSearch() {
     const arr = [...employees.results];
@@ -58,6 +77,7 @@ function ResultContainer() {
         handleInputChange={handleInputChange}
         handleSearch={handleSearch}
         resetSearch={resetSearch}
+        handleSort={handleSort}
       />
       <List results={employees.filterResults} />
     </>
