@@ -2,12 +2,8 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-[![Size](https://img.shields.io/github/repo-size/timvvoodman/reponame)
-[![Language](https://img.shields.io/github/languages/top/timvvoodman/reponamegit)
-
-## Screenshot / GIF of the application (Demo)
-
-![Demo Screenshot / GIF](Link)
+[![Size](https://img.shields.io/github/repo-size/timvvoodman/react-employee-directory)
+[![Language](https://img.shields.io/github/languages/top/timvvoodman/react-employee-directory)
 
 ## Application Description
 
