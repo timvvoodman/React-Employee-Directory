@@ -16,7 +16,9 @@ function List({ results }) {
       <tbody>
         {results.map((result) => (
           <tr>
-            <td>{result.picture.thumbnail}</td>
+            <td>
+              <img src={result.picture.thumbnail} alt="employee"></img>
+            </td>
             <td>{result.name.first}</td>
             <td>{result.name.last}</td>
             <td>{result.email}</td>
